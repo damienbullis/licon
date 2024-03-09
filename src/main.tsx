@@ -1,13 +1,11 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 // import { testing } from 'licon-react';
-import { Testing } from '../lib/main';
-
+import { helloAnything } from '../';
 import './index.css';
-
 function App() {
-	Testing();
-	return <div>tset</div>;
+	const res = helloAnything('world');
+	return <div>{res}</div>;
 }
 const el = document.getElementById('app');
 if (!el) throw new Error('app element not found');

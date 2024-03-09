@@ -1,5 +1,3 @@
-function Testing() {
-	console.log('Testing');
+export function helloAnything(thing: string): string {
+	return `Hello ${thing}!`;
 }
-
-export { Testing };
