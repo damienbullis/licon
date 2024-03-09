@@ -1,54 +1,58 @@
 {
-	"name": "licon",
-	"description": "Lazy loading your icons with React",
-	"author": {
-		"name": "Damien Bullis"
-	},
-	"keywords": [
-		"react",
-		"icon",
-		"lazy",
-		"loading",
-		"licon",
-		"svg",
-		"suspense",
-		"@phosphor-icons/react"
-	],
-	"private": true,
-	"version": "0.0.0",
-	"type": "module",
-	"files": ["dist"],
-	"main": "./dist/licon.umd.cjs",
-	"module": "./dist/licon.js",
-	"types": "./dist/main.d.ts",
-	"exports": {
-		".": {
-			"import": "./dist/licon.js",
-			"require": "./dist/licon.umd.cjs",
-			"types": "./dist/main.d.ts"
-		}
-	},
-	"scripts": {
-		"dev": "bunx --bun vite",
-		"build": "bun run lint && bunx --bun vite build && tsc --p ./tsconfig.build.json",
-		"lint": "tsc && bunx biome lint .",
-		"prepublishOnly": "bun run build",
-		"preview": "bunx --bun vite preview"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.6.0",
-		"@types/bun": "^1.0.8",
-		"@types/react": "^18.2.64",
-		"@types/react-dom": "^18.2.21",
-		"@vitejs/plugin-react": "^4.2.1",
-		"prettier": "3.2.5",
-		"typescript": "^5.4.2",
-		"vite": "^5.1.5",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
-	},
-	"peerDependencies": {
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
-	}
+  "name": "licon",
+  "description": "Lazy loading your icons with React",
+  "author": {
+    "name": "Damien Bullis"
+  },
+  "keywords": [
+    "react",
+    "icon",
+    "lazy",
+    "loading",
+    "licon",
+    "svg",
+    "suspense",
+    "@phosphor-icons/react"
+  ],
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/licon.umd.cjs",
+  "module": "./dist/licon.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/licon.js",
+      "require": "./dist/licon.umd.cjs",
+      "types": "./dist/main.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "bunx --bun vite",
+    "build": "bun run lint && bunx --bun vite build && tsc --p ./tsconfig.build.json",
+    "lint": "tsc && bunx biome lint .",
+    "prepublishOnly": "bun run build",
+    "preview": "bunx --bun vite preview"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.0",
+    "@types/bun": "^1.0.8",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "prettier": "3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.5"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
