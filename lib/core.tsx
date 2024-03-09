@@ -38,7 +38,7 @@ export function makeLicon(
 	fallback?: React.ReactElement
 ) {
 	const C = lazy(() => i),
-		F = fallback || <span></span>;
+		F = fallback || <span />;
 
 	return forwardRef<RegisterElement, LiconProps>((props, ref) => {
 		return (
@@ -57,8 +57,12 @@ type RegisterMap = Licon extends {
 type RegisterElement = Licon extends {
 	iconMap: infer T;
 }
-	? T[keyof T]
-	: SVGSVGElement;
+	? Licon extends {
+			iconElement: infer U;
+		}
+		? U
+		: T[keyof T]
+	: SVGElement | HTMLElement | React.ElementType;
 
 export interface Licon {
 	// iconElement,
