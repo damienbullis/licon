@@ -1,3 +1,2 @@
-export function helloAnything(thing: string): string {
-	return `Hello ${thing}!`;
-}
+export { makeIconBase, makeLicon } from './core';
+export type { Licon } from './core';
