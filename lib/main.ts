@@ -1,3 +1,5 @@
-const Test = () => console.log('Test');
+function Testing() {
+	console.log('Testing');
+}
 
-export { Test };
+export { Testing };
