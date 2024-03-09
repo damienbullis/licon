@@ -1,22 +1,38 @@
 {
 	"name": "licon",
+	"description": "Lazy loading your icons with React",
+	"author": {
+		"name": "Damien Bullis"
+	},
+	"keywords": [
+		"react",
+		"icon",
+		"lazy",
+		"loading",
+		"licon",
+		"svg",
+		"suspense",
+		"@phosphor-icons/react"
+	],
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
 	"files": ["dist"],
 	"main": "./dist/licon.umd.cjs",
 	"module": "./dist/licon.js",
+	"types": "./dist/main.d.ts",
 	"exports": {
-		"./licon-react": {
+		".": {
 			"import": "./dist/licon.js",
-			"require": "./dist/licon.umd.cjs"
+			"require": "./dist/licon.umd.cjs",
+			"types": "./dist/main.d.ts"
 		}
 	},
-
 	"scripts": {
 		"dev": "bunx --bun vite",
-		"build": "tsc --p ./tsconfig.build.json && bunx --bun vite build",
-		"lint": "bunx biome lint .",
+		"build": "bun run lint && bunx --bun vite build && tsc --p ./tsconfig.build.json",
+		"lint": "tsc && bunx biome lint .",
+		"prepublishOnly": "bun run build",
 		"preview": "bunx --bun vite preview"
 	},
 	"devDependencies": {
@@ -27,9 +43,11 @@
 		"@vitejs/plugin-react": "^4.2.1",
 		"prettier": "3.2.5",
 		"typescript": "^5.4.2",
-		"vite": "^5.1.5"
+		"vite": "^5.1.5",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
 	},
-	"dependencies": {
+	"peerDependencies": {
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	}

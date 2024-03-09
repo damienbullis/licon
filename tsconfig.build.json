@@ -1,4 +1,11 @@
 {
 	"extends": "./tsconfig.json",
-	"include": ["lib"]
+	"include": ["lib"],
+	"compilerOptions": {
+		"declaration": true,
+		"declarationDir": "./dist",
+		"noEmit": false,
+		"emitDeclarationOnly": true,
+		"listEmittedFiles": true
+	}
 }
