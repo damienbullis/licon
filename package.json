@@ -3,6 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": ["dist"],
+  "main": "./dist/licon.umd.cjs",
+  "module": "./dist/licon.js",
+  "exports": {
+    ".": {
+      "import": "./dist/licon.js",
+      "require": "./dist/licon.umd.cjs"
+    } 
+  },
+
   "scripts": {
     "dev": "bunx --bun vite",
     "build": "tsc && bunx --bun vite build",

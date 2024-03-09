@@ -1,4 +1,4 @@
-import { resolveSync } from 'bun';
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
@@ -6,7 +6,7 @@ export default defineConfig({
 	plugins: [react()],
 	build: {
 		lib: {
-			entry: resolveSync('lib/index.ts', process.cwd()),
+			entry: resolve(__dirname, 'lib/main.ts'),
 			name: 'licon',
 			fileName: 'licon',
 		},
