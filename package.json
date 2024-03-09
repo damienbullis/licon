@@ -1,36 +1,36 @@
 {
-  "name": "licon",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "files": ["dist"],
-  "main": "./dist/licon.umd.cjs",
-  "module": "./dist/licon.js",
-  "exports": {
-    ".": {
-      "import": "./dist/licon.js",
-      "require": "./dist/licon.umd.cjs"
-    } 
-  },
+	"name": "licon",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"files": ["dist"],
+	"main": "./dist/licon.umd.cjs",
+	"module": "./dist/licon.js",
+	"exports": {
+		"./licon-react": {
+			"import": "./dist/licon.js",
+			"require": "./dist/licon.umd.cjs"
+		}
+	},
 
-  "scripts": {
-    "dev": "bunx --bun vite",
-    "build": "tsc && bunx --bun vite build",
-    "lint": "bunx biome lint .",
-    "preview": "bunx --bun vite preview"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.6.0",
-    "@types/bun": "^1.0.8",
-    "@types/react": "^18.2.64",
-    "@types/react-dom": "^18.2.21",
-    "@vitejs/plugin-react": "^4.2.1",
-    "prettier": "3.2.5",
-    "typescript": "^5.4.2",
-    "vite": "^5.1.5"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
+	"scripts": {
+		"dev": "bunx --bun vite",
+		"build": "tsc --p ./tsconfig.build.json && bunx --bun vite build",
+		"lint": "bunx biome lint .",
+		"preview": "bunx --bun vite preview"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.6.0",
+		"@types/bun": "^1.0.8",
+		"@types/react": "^18.2.64",
+		"@types/react-dom": "^18.2.21",
+		"@vitejs/plugin-react": "^4.2.1",
+		"prettier": "3.2.5",
+		"typescript": "^5.4.2",
+		"vite": "^5.1.5"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	}
 }

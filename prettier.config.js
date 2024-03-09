@@ -6,6 +6,16 @@ const config = {
 	singleQuote: true,
 	trailingComma: 'es5',
 	semi: true,
+	overrides: [
+		{
+			files: '*.json',
+			options: {
+				parser: 'json',
+				tabWidth: 4,
+				useTabs: true,
+			},
+		},
+	],
 	// parser: 'typescript',
 };
 
