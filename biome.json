@@ -2,5 +2,15 @@
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
 	"files": {
 		"ignore": ["dist", "node_modules", "public"]
+	},
+	"linter": {
+		"rules": {
+			"style": {
+				"useSingleVarDeclarator": "off"
+			},
+			"suspicious": {
+				"noEmptyInterface": "off"
+			}
+		}
 	}
 }
