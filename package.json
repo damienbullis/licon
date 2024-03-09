@@ -6,10 +6,14 @@
   "scripts": {
     "dev": "bunx --bun vite",
     "build": "tsc && bunx --bun vite build",
+    "lint": "bunx biome lint .",
     "preview": "bunx --bun vite preview"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.6.0",
+    "@types/bun": "^1.0.8",
     "@vitejs/plugin-react": "^4.2.1",
+    "prettier": "3.2.5",
     "typescript": "^5.4.2",
     "vite": "^5.1.5"
   }
