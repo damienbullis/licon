@@ -6,7 +6,7 @@ const config = {
 	singleQuote: true,
 	trailingComma: 'es5',
 	semi: true,
-	parser: 'typescript',
+	// parser: 'typescript',
 };
 
 export default config;
